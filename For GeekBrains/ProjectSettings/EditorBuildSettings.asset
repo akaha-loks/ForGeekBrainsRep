@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Project/TouchMob/Scene/MobScene.unity
+    guid: 35f5fbf1ff030c4edb635673232cd641
   m_configObjects: {}
