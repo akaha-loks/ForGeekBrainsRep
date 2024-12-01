@@ -793,7 +793,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.6463749, y: 0.00010197178, z: -0.00008665511, w: 0.76302}
+  m_LocalRotation: {x: 0.6463749, y: 0.000102229744, z: -0.00008687539, w: 0.76302}
   m_LocalPosition: {x: 1.08, y: 60.496, z: -9.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1390,7 +1390,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238391414}
-  m_LocalRotation: {x: -0, y: 0.0000000015570549, z: -0.000000009567884, w: 1}
+  m_LocalRotation: {x: -0, y: 0.000000001549779, z: -0.000000009560608, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1753,7 +1753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashVFX: {fileID: 139409157}
   dashPower: 30
-  dashDaly: 3
+  dashCount: 10
+  dashDaly: 1
   canDash: 1
 --- !u!1001 &1612464818
 PrefabInstance:

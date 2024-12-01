@@ -15,15 +15,10 @@ public class DashSystem : ComponentSystem
         Entities.With(_dashQuary).ForEach(
             (Entity entity, ref InputData input, UserInputData inputData, Transform transform, DashComponent dash) =>
             {
-                var t = transform.position;
-
-                if (dash.canDash == true && input.Dash > 0 && inputData != null && inputData.DashAction is IAbility ability)
+                if (input.Dash > 0 && inputData != null && inputData.DashAction is IAbility ability)
                 {
                     dash.Execute();
-                    transform.position += transform.forward * (dash.dashPower / 100);
                 }
-
-                transform.position = t;
             });
     }
 }

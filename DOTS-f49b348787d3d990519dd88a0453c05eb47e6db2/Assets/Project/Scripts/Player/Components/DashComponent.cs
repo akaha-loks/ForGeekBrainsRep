@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class DashComponent : MonoBehaviour, IAbility
 {
@@ -6,39 +7,25 @@ public class DashComponent : MonoBehaviour, IAbility
 
     public float dashPower = 7f;
 
+    public float dashCount = 5f;
+
     public float dashDaly;
     private float _dashTime = float.MinValue;
 
-    public bool canDash = true;
-
-   /* public void Dashing()
-    {
-        if (Time.time < _dashTime + dashDaly) return;
-        
-        _dashTime = Time.time;
-        canDash = false;
-        dashVFX.SetActive(false);
-
-        if (dashVFX == null)
-        {
-            Debug.LogError("[SHOOT ABILITY] No link dash");
-        }
-    }
-    */
     public void Execute()
     {
-        Debug.Log("NO Dash");
         if (Time.time < _dashTime + dashDaly) return;
 
-        _dashTime = Time.time;
-        canDash = true;
-        dashVFX.SetActive(true);
-
-        Debug.Log("Dash");
-
-        if (dashVFX == null)
+        var t = transform.position;
+        for (int i = 0; i < dashCount; i++)
         {
-            Debug.LogError("[SHOOT ABILITY] No link dash");
+            Vector3 dashPos = transform.forward;
+            t += dashPos * dashPower * Time.deltaTime;
         }
+        transform.position = t;
+
+        _dashTime = Time.time;
+
+
     }
 }
